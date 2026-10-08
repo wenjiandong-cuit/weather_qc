@@ -1,0 +1,16 @@
+# ---- Python 缓存 ----
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ---- 临时/调试/备份(会话里产生的) ----
+_tmp_*
+*.bak_*
+_backup_*
+
+# ---- 系统/编辑器 ----
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

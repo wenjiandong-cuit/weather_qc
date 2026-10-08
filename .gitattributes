@@ -1,0 +1,22 @@
+# 换行统一: 仓库里一律 LF; 检出时按平台处理
+* text=auto
+
+*.py     text eol=lf
+*.md     text eol=lf
+*.txt    text eol=lf
+*.ipynb  text eol=lf
+*.json   text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+
+# Windows 脚本还是用 CRLF
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# 二进制, 别动
+*.png    binary
+*.jpg    binary
+*.pdf    binary
+*.zip    binary
+*.7z     binary
+*.npz    binary
