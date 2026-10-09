@@ -125,6 +125,11 @@ __version__ = '1.1'
 # 名字 -> 所在子模块。顺序决定 __all__ 的排列顺序, 改动请保持分组。
 _EXPORTS = {
     '.step01_sounding': ('read_sounding',),
+    # 非步骤: 读取入口(都只认全路径) —— 2026-10-08 起集中到 QC/io
+    #   read_base_data: 基数据 .bin.zip -> pyart Radar   (别名 read_pa_radar)
+    #   read_qc_data  : QC 产物 .pkl.gz -> pyart Radar   (别名 load_qc_radar)
+    '.io.fast_read': ('read_base_data', 'read_pa_radar'),
+    '.io.load_qc_radar': ('read_qc_data', 'load_qc_radar'),
     '.step02_gatefilter': ('build_qc_gatefilter', 'build_qc_gatefilter_basic',
                            'moment_texture_gatefilter'),
     # 非步骤: 沿射线纹理"跳过空窗"快速版 —— step02 的 moment+texture 门控自动用它

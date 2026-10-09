@@ -189,6 +189,11 @@ def read_pa_radar(path, fields=FAST_FIELDS_RUN, verbose=False, align_uneven=Fals
     return radar
 
 
+# ★ 2026-10-08 用户定的对外名字: 读**基数据**(.bin.zip, 全路径) -> pyart Radar。
+#   read_base_data 是主推名字; read_pa_radar 保留为别名, 不破坏已有 30+ 处调用。
+read_base_data = read_pa_radar
+
+
 # ---------------------------------------------------------------------------
 # 和 pycwr 逐项比对（--verify）
 # ---------------------------------------------------------------------------
